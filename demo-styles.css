@@ -85,14 +85,14 @@ model-viewer {
 .product-details__buttons-buy {
   height: 58px;
   width: 130px;
-  background: #ffb400;
+  background: #23cf40;
   margin: 10px auto;
 }
 
 .product-details__buttons-favourites {
   height: 58px;
   width: 130px;
-  background: #963636;
+  background: #4287f5;
   margin: 10px auto;
   color: #ffffff;
 }
