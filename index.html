@@ -1,67 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Wooden Chair</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <title>&lt;model-viewer&gt; codelab</title>
-  <link rel="manifest" href="manifest.json" />
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="demo-styles.css" />
+    <!-- The following libraries and polyfills are recommended to maximize browser support -->
+    <!-- NOTE: you must adjust the paths as appropriate for your project -->
 
-  <link rel="stylesheet" href="demo-styles.css" />
-  <!-- The following libraries and polyfills are recommended to maximize browser support -->
-  <!-- NOTE: you must adjust the paths as appropriate for your project -->
+    <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
+    <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
 
-  <!-- 🚨 REQUIRED: Web Components polyfill to support Edge and Firefox < 63 -->
-  <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.1.3/webcomponents-loader.js"></script>
+    <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
+    <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
 
-  <!-- 💁 OPTIONAL: Intersection Observer polyfill for better performance in Safari and IE11 -->
-  <script src="https://unpkg.com/intersection-observer@0.5.1/intersection-observer.js"></script>
+    <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
+    <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
 
-  <!-- 💁 OPTIONAL: Resize Observer polyfill improves resize behavior in non-Chrome browsers -->
-  <script src="https://unpkg.com/resize-observer-polyfill@1.5.1/dist/ResizeObserver.js"></script>
+    <!-- 💁 OPTIONAL: Fullscreen polyfill is required for experimental AR features in Canary -->
+    <!--<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>-->
 
-  <!-- 💁 OPTIONAL: Fullscreen polyfill is required for experimental AR features in Canary -->
-  <!--<script src="https://unpkg.com/fullscreen-polyfill@1.0.2/dist/fullscreen.polyfill.js"></script>-->
+    <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
+    <!--<script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>-->
+  </head>
 
-  <!-- 💁 OPTIONAL: Include prismatic.js for Magic Leap support -->
-  <!--<script src="https://unpkg.com/@magicleap/prismatic@0.18.2/prismatic.min.js"></script>-->
-</head>
-
-<body>
-  <p>
-    <model-viewer src="assets/chair_pastel.glb" ios-src="assets/chair_pastel.usdz" ar auto-rotate
-      auto-rotate-delay="500" autoplay camera-controls background-color="#70BCD1" shadow-intensity="1"
-      alt="View our new chair model">
-    </model-viewer>
-  </p>
-  <div class="product-details">
-    <h3 class="product-details__title">Quality Wooden Chair</h3>
-    <p class="product-details__price">$29.99</p>
-    <div class="product-details__buttons">
-      <button type="button" class="product-details__buttons-buy">Add to Cart</button>
-      <button type="button" class="product-details__buttons-favourites">Favourites</button>
+  <body>
+    <p>
+      <model-viewer
+        src="assets/chair_pastel.glb"
+        ios-src="assets/chair_pastel.usdz"
+        ar
+        auto-rotate
+        auto-rotate-delay="500"
+        autoplay
+        camera-controls
+        background-color="#70BCD1"
+        shadow-intensity="1"
+        alt="View our new chair model"
+        poster="assets/chair_static.png"
+      >
+      </model-viewer>
+    </p>
+    <div class="product-details">
+      <h3 class="product-details__title">Quality Wooden Chair</h3>
+      <p class="product-details__price">$29.99</p>
+      <div class="product-details__buttons">
+        <button type="button" class="product-details__buttons-buy">
+          Add to Cart
+        </button>
+        <button type="button" class="product-details__buttons-favourites">
+          Favourites
+        </button>
+      </div>
     </div>
-  </div>
-  <div class="description-container">
-    <div class="description">
-      <p>
-        Come in and take a seat! We want to make it easy for you to find the seating your home needs. So we've collected
-        our chairs, stools and benches here. Everything from comfy dining chairs to sun loungers, folding chairs for
-        parties to office chairs for work. On the other hand, if you're looking for sofas and armchairs, try here.
-      </p>
-      <p>
-        You can also build your own dining chair or desk chair using our online planners.
-      </p>
+    <div class="description-container">
+      <div class="description">
+        <p>
+          Come in and take a seat! We want to make it easy for you to find the
+          seating your home needs. So we've collected our chairs, stools and
+          benches here. Everything from comfy dining chairs to sun loungers,
+          folding chairs for parties to office chairs for work. On the other
+          hand, if you're looking for sofas and armchairs, try here.
+        </p>
+        <p>
+          You can also build your own dining chair or desk chair using our
+          online planners.
+        </p>
+      </div>
     </div>
-  </div>
-  <!-- 💁 Include both scripts below to support all browsers! -->
+    <!-- 💁 Include both scripts below to support all browsers! -->
 
-  <!-- Loads <model-viewer> for modern browsers: -->
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
+    <!-- Loads <model-viewer> for modern browsers: -->
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"
+    ></script>
 
-  <!-- Loads <model-viewer> for old browsers like IE11: -->
-  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-</body>
-
+    <!-- Loads <model-viewer> for old browsers like IE11: -->
+    <script
+      nomodule
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"
+    ></script>
+  </body>
 </html>
